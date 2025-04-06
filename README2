@@ -1,0 +1,30 @@
+Project Overview:
+In modern operating systems, deadlock is a serious issue that can lead to system unresponsiveness and potential data loss. This project, titled Deadlock Prevention and Recovery Toolkit, was designed to help visualize, detect, and prevent deadlocks using well-known concepts like the Banker's Algorithm and Resource Allocation Graphs.
+Built with Python and a PyQt5 interface, this toolkit allows users to simulate resource allocation scenarios and easily check if the system is in a safe state or in deadlock.
+________________________________________
+Modular Architecture:
+To make the application scalable and maintainable, we separated it into distinct modules:
+Module	Description
+main.py:	Entry point of the application that initializes the GUI.
+ui.py:	Handles all user interface elements, including input fields, tables, and buttons.
+algorithm.py	:Contains the implementation of the Banker's Algorithm.
+graph.py:	Visualizes the Resource Allocation Graph with NetworkX and Matplotlib.
+This separation of concerns ensures that the logic and the UI are independent, making the codebase easier to understand and extend.
+________________________________________
+Key Features:
+Dynamic Input Interface:
+•	Users can enter the number of processes and resources.
+•	Automatically generates a table where users can input Allocation, Max, and Available resources.
+Deadlock Detection:
+•	Implements the Banker's Algorithm to calculate the Need matrix and determine if the system is in a safe state.
+•	Displays a safe sequence if available; otherwise, notifies that the system is in deadlock.
+Resource Allocation Graph (RAG):
+•	Provides a visual representation of resource allocations and requests.
+•	Uses green arrows for allocated resources and dashed orange arrows for requested resources.
+•	Helps users intuitively understand deadlock conditions and relationships between processes and resources.
+________________________________________
+Technologies Used:
+•	Python 3
+•	PyQt5 – for building the GUI
+•	NumPy – for matrix operations
+•	NetworkX & Matplotlib – for graph visualizations
